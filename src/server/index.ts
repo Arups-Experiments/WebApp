@@ -37,13 +37,13 @@ const initServer = (appInstance: Application) => {
         res: Response,
         next: NextFunction,
     ) => {
-        console.error(err);
         res.status(httpStatus.INTERNAL_SERVER_ERROR).send({
             errors: [{ message: 'Something went wrong' }],
         });
     };
 
     appInstance.use('/v1', UserRoute);
+
     appInstance.use('/v1', CounterRoute);
 
     appInstance.get('/', async (req: Request, res: Response) => {
