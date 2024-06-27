@@ -1,0 +1,20 @@
+# Ignore package.json
+package.json
+package-lock.json
+tsconfig.json
+.prettierrc
+.nvmrc
+
+# Ignore all JSON files
+*.json
+
+# Ignore all node_modules
+node_modules/
+
+# Ignore build directory
+build/
+dist/
+
+# Ignore any other files or directories
+.env
+.cache/
